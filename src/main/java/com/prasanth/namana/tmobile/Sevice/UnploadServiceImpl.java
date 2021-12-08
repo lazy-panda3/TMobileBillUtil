@@ -110,7 +110,7 @@ public class UnploadServiceImpl implements UploadService{
             commonCharges += individualTotal.get(manditory[0])[headers.length-1];
         Double[] chargesPerPerson;
         calculatedTotal[0] = commonCharges;
-        commonCharges = Math.round(commonCharges) / 10.0;
+        commonCharges = (commonCharges) / 10.0;
         for(String key : individualTotal.keySet()){
             chargesPerPerson = individualTotal.get(key);
             if(key.matches("^[^A-Za-z]+.*")) {
